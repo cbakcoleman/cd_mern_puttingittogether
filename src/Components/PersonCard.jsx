@@ -8,14 +8,18 @@ class MyNewComponent extends Component {
         };
     }
 
+    eatDukGuk = () => {
+        this.setState({ agePlus: this.state.agePlus +=1 });
+    }
+
     render() {
 
         return (
             <div>
                 <h3>{this.props.lastName}, {this.props.firstName}</h3>
-                <h6>Age: {this.props.age}</h6>
+                <h6>Age: {this.state.agePlus}</h6>
                 <h6>Hair Color: {this.props.hairColor}</h6>
-                <button onClick={ () => {this.setState({ agePlus: agePlus += 1})}}> Eat some DukGuk </button>
+                <button onClick={ this.eatDukGuk}> Eat some DukGuk </button>
             </div>
         )
     }
