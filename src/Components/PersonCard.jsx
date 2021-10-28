@@ -9,7 +9,7 @@ class MyNewComponent extends Component {
     }
 
     eatDukGuk = () => {
-        this.setState({ agePlus: this.state.agePlus +=1 });
+        this.setState({ agePlus: this.state.agePlus +1 });
     }
 
     render() {
